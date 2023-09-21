@@ -34,7 +34,7 @@ void bubble_sort(int *array, size_t size)
  * sort_check - checks if array is completely sorted
  * @array: The array to be sorted
  * @size: Number of elements in the array
- * Return - True or 1 if completely sorted, false otherwise
+ * Return: True or 1 if completely sorted, false otherwise
  */
 
 int sort_check(int *array, size_t size)
@@ -44,7 +44,7 @@ int sort_check(int *array, size_t size)
 	for (i = 0; i < size - 1; i++)
 	{ /*Check if array is already sorted*/
 		if (array[i] > array[i + 1])
-			return 0;
+			return (0);
 	}
-	return 1;
+	return (1);
 }
