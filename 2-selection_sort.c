@@ -35,7 +35,8 @@ void selection_sort(int *array, size_t size)
 	}
 }
 
-/** sortCheck_select - checks if array is sorted already
+/** 
+ * sortCheck_select - checks if array is sorted already
  * @array: the ....
  * @size: ..
  */
