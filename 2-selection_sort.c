@@ -19,7 +19,7 @@ void selection_sort(int *array, size_t size)
 		{
 			swap(array, i, i + 1);
 			print_array(array, size);
-			if (sort_check(array, size))
+			if (sortCheck_seleck(array, size))
 				break;
 		}
 		for (j = (i + 2); j < size; j++)
@@ -28,11 +28,28 @@ void selection_sort(int *array, size_t size)
 			{
 				swap(array, i, j);
 				print_array(array, size);
-				if (sort_check(array, size))
+				if (sortCheck_seleck(array, size))
 					break;
 			}
 		}
 	}
+}
+
+/** sortCheck_select - checks if array is sorted already
+ * @array: the ....
+ * @size: ..
+ */
+
+int sortCheck_seleck(int *array, size_t size)
+{
+	size_t i;
+
+	for (i = 0; i < size - 1; i++)
+	{ /*Check if array is already sorted*/
+		if (array[i] > array[i + 1])
+			return (0);
+	}
+	return (1);
 }
 
 /**
