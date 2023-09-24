@@ -28,5 +28,8 @@ void print_array(const int *array, size_t size);
 int sort_check(int *array, size_t size);
 void bubble_sort(int *array, size_t size);
 int sortCheck_seleck(int *array, size_t size);
+void quick_sort(int *array, size_t size);
+void swapper(int e, int s, int *array);
+void qsorter(int start, int end, int *array, size_t size);
 
 #endif
