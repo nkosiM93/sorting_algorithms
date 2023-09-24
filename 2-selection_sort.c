@@ -13,6 +13,9 @@ void selection_sort(int *array, size_t size)
 	if (!array || size == 0)
 		return;
 
+	if (sortCheck_seleck(array, size))
+		return;
+
 	for (i = 0; i < size - 1; i++)
 	{
 		if (array[i + 1] < array[i])
@@ -27,7 +30,6 @@ void selection_sort(int *array, size_t size)
 			if (array[i] > array[j])
 			{
 				swap(array, i, j);
-				/*					print_array(array, size);*/
 				if (sortCheck_seleck(array, size))
 					break;
 			}
