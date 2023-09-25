@@ -30,7 +30,8 @@ void shell_sort(int *array, size_t size)
 			{
 				insertionSort(array, (int)inter, (int)i);
 			}
-		print_array(array, size);
+		if (inter > 1)
+			print_array(array, size);
 		inter = (inter - 1) / 3;
 	}
 }
