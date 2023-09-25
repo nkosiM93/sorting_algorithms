@@ -31,5 +31,10 @@ int sortCheck_seleck(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void swapper(int e, int s, int *array);
 void qsorter(int start, int end, int *array, size_t size);
+void swapShell(size_t i, size_t j, int *array);
+void shell_sort(int *array, size_t size);
+void insertionSort(int *array, int inter, int i);
+int sorted(int *array, size_t size);
+int allSame(int *array, size_t size);
 
 #endif
