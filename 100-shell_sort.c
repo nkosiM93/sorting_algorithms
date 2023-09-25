@@ -13,7 +13,7 @@ void shell_sort(int *array, size_t size)
 
 	inter = 1;
 
-	if (!array || size == 0)
+	if (!array || size == 0 || size == 1)
 		return;
 
 	if (allSame(array, size) == 1 || sorted(array, size) == 1)
