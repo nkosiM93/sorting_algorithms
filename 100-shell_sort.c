@@ -16,12 +16,12 @@ void shell_sort(int *array, size_t size)
 	if (!array || size == 0)
 		return;
 
-	if(allSame(array, size) == 1 || sorted(array, size) == 1)
+	if (allSame(array, size) == 1 || sorted(array, size) == 1)
 		return;
 
 	while (inter < size)
 		inter *= 3 + 1;
-	inter = (inter - 1)/3;
+	inter = (inter - 1) / 3;
 
 	while (inter >= 1)
 	{
@@ -31,7 +31,7 @@ void shell_sort(int *array, size_t size)
 				insertionSort(array, (int)inter, (int)i);
 			}
 		print_array(array, size);
-		inter = (inter - 1)/3;
+		inter = (inter - 1) / 3;
 	}
 }
 
@@ -65,7 +65,8 @@ void insertionSort(int *array, int inter, int i)
 	}
 }
 
-/** swapShell - sawapping function for the Shell sort algo
+/**
+ * swapShell - sawapping function for the Shell sort algo
  * @i: the one element
  * @j: the other element
  * @array: the array where swapping is perfomed
@@ -79,7 +80,8 @@ void swapShell(size_t i, size_t j, int *array)
 	array[j] = temp;
 }
 
-/** allSame - checks if an array has only one value
+/**
+ * allSame - checks if an array has only one value
  * @array: The array
  * @size: The number of elements in the array
  * Return: 1 if true and 0 if not
