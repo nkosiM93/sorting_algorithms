@@ -23,16 +23,20 @@ void shell_sort(int *array, size_t size)
 		inter *= 3 + 1;
 	inter = (inter - 1) / 3;
 
+	if (inter == 1)
+	{
+		for (i = 0; i < (size - inter); i += inter)
+			insertionSort(array, (int)inter, (int)i);
+		return;
+	}
+
 	while (inter >= 1)
 	{
 		for (c = 0; c < inter; c++)
 			for (i = c; i < (size - inter); i += inter)
-			{
 				insertionSort(array, (int)inter, (int)i);
-			}
-		if (inter > 1)
-			print_array(array, size);
 		inter = (inter - 1) / 3;
+		print_array(array, size);
 	}
 }
 
