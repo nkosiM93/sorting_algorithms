@@ -20,7 +20,7 @@ void shell_sort(int *array, size_t size)
 		return;
 
 	while (inter < size)
-		inter *= 3 + 1;
+		inter = inter * 3 + 1;
 	inter = (inter - 1) / 3;
 
 	if (inter == 1)
