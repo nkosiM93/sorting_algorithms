@@ -18,46 +18,40 @@ void quick_sort(int *array, size_t size)
  * @start: Wwhere to start from
  * @end: where to end
  * @array: The array to be sorted
- * @size: The number of elements in the array
+ * @size: Number of array memebers
  */
-void qsorter(int start, int end, int *array, size_t size)
+void qsorter(int start, int pv, int *array, size_t size)
 {
-	int pv, e, s, d;
+	int s, i, end, sorted;
 
-	pv = start;
 	s = start;
-	e = end;
-	d = 0;
+	i = start - 1;
+	sorted = 1;
 
-	if (start == end)
+	if (start >= pv)
 		return;
-	while (s != e)
+	for (; s <= pv; s++)
 	{
-		if (array[s] > array[e])
+		if (array[s] <= array[pv])
 		{
-			swapper(e, s, array);
-			print_array(array, size);
-			if (d == 0)
+			i++; /* So that we r able to check equality b4 call */
+			if (i != s)
 			{
-				pv = e;
-				d = 1;
-				s++;
+				swapper(i, s, array);
+				print_array(array, size);
+				sorted = 1;
 			}
 			else
 			{
-				pv = s;
-				d = 0;
-				e--;
+				if (array[s] > array[s + 1])
+					sorted = 0;
 			}
-		}
-		else
-		{
-			if (d == 1)
-				s++;
-			else
-				e--;
 		}
 	}
+	if (pv == i && sorted == 1)
+		return;
+	end = pv;
+	pv = i;
 	if (!(pv - 1 <= start))
 		qsorter(start, pv - 1, array, size);
 	if (!(pv + 1 >= end))
