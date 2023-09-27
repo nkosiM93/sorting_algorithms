@@ -16,7 +16,7 @@ void quick_sort(int *array, size_t size)
 /**
  * qsorter - Impliments the quicksort algorithm
  * @start: Wwhere to start from
- * @end: where to end
+ * @pv: The Pivot
  * @array: The array to be sorted
  * @size: Number of array memebers
  */
